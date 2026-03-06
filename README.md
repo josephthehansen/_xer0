@@ -7,7 +7,7 @@ _xer0 is a total architectural redesign of how digital media is authored, linked
 *This repository currently houses the foundational architectural manifesto and technical rationale for Project _xer0, born from a late-night systems design session in March 2026. The link to the chat below contains the raw conceptualization. This repo is parked for future development, FOSS contribution, and structural mapping.*
 
 ### Note
-Conversation conducted using [AI Studio](https://aistudio.google.com/). Original converstaion with Gemini (https://gemini.google.com/) around 2026-03-05T22:00:00+02:00Z but copy-pasted to AI Studio for easier sharing.
+*Conversation conducted using [AI Studio](https://aistudio.google.com/). Original converstaion with Gemini (https://gemini.google.com/) around `2026-03-05T22:00:00+02:00Z` but copy-pasted to AI Studio for easier sharing.*
 
 To continue converstaion, click [here](https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221NnPDj4VJan-ks6x7ZdmjxQj-LbuV6pxM%22%5D,%22action%22:%22open%22,%22userId%22:%22101246979329773948425%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing). To save to your conversations, click the three vertical dots `⋮` on the top right and say "Make a copy".
 
@@ -91,3 +91,37 @@ Project _xer0 is meant to be the final pillar required for creatives to migrate 
 - [ ] Establish the local WebRTC P2P tunnel protocol.
 
 *"Write programs that do one thing and do it well. Write programs to work together." - The Unix Philosophy.*
+
+---
+
+*The update below is based on [this chat](https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2217-8fzxcR9am__q9488HQF5TVSesYEUfk%22%5D,%22action%22:%22open%22,%22userId%22:%22101246979329773948425%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing)*.
+
+## 6. UPDATE: Architecture 2.0 — The Dimensional Matrix & Zero-Copy Engine
+*Following further architectural review, the initial reliance on traditional Unix IPC (Inter-Process Communication) and standard piping for applet sub-processing has been deprecated. Passing high-fidelity, 60fps visual and audio data between isolated processes creates unacceptable I/O bottlenecks. The architecture has evolved from a collection of "linked apps" into a **Unified Data-Driven Engine**, treating media natively as multi-dimensional spaces.*
+
+### A. Zero-Copy Shared Memory (The End of Piping)
+Instead of Applet A *sending* data to Applet B, the `_xer0` core utilizes a Zero-Copy Shared Memory architecture (conceptually similar to Apache Arrow). 
+The core allocates a central block of RAM for the Abstract Syntax Tree (AST). The Visual Renderer, the Audio Engine, and the Python Calculator do not pipe data to one another; they possess pointers to the *exact same memory address*. There is zero lag, zero piping, and zero copying. When a spreadsheet node updates a variable, the 3D renderer instantly redraws it on the next frame because it is observing the identical memory block.
+
+### B. The Unified Field Theory of Media (Tensors)
+_xer0 fundamentally stops treating media as "files" (audio, video, text) and instead treats all data as manipulatable multidimensional arrays (Tensors). The user interface simply projects different "Lenses" onto this data based on the desired dimensionality:
+
+*   **1D Space (Linear):** Semantic text, markdown, or code. A single line of tokens moving forward. (Audio is also a 1D space: amplitude moving along a time vector).
+*   **2D Space (Spatial):** Images (X, Y coordinate planes) and Spreadsheets (Rows, Columns).
+*   **3D Space (Spatial + Discrete Time):** Multi-page documents or Slide Presentations. 2D planes stacked on a Z-axis, navigated via **Event-Driven triggers** (e.g., a user click).
+*   **3D/4D Space (Spatial + Continuous Time):** Video and Animation. Identical to a presentation, except movement through the Z-axis is **Clock-Driven** (e.g., advancing strictly at 24 frames per second).
+
+Because all media shares this unified physics engine, cross-modality translation is trivial. A user can map spreadsheet rows to an X-axis and the columns to a Time-axis, seamlessly rendering a financial dataset as an animated video.
+
+### C. Exporting as "Dimensionality Reduction"
+In _xer0, a master project is a high-dimensional workspace (containing spatial, temporal, semantic, and logic dimensions). Therefore, "Saving" or "Exporting" to legacy formats is redefined as **Dimensionality Reduction**. 
+We project a shadow of the 4D workspace into a lower dimension so legacy, monopolistic software can comprehend it:
+*   Exporting to `.mp3` strips away the spatial and logic dimensions, collapsing the data into 1D Time.
+*   Exporting to `.jpg` strips away time and logic, collapsing the data into a flat 2D matrix of pixels.
+*   Exporting to _xer0's native presentation format retains the higher dimensions, baking in the vector math, interactivity, and cryptographic signatures.
+
+### D. Pragmatic Rollout Strategy (Avoiding the "Everything App" Trap)
+To prevent scope creep and ensure stability, `_xer0` will not attempt to build UI parity with Excel, Premiere, and Illustrator simultaneously. 
+*   **Phase 1:** Build the core Zero-Copy Engine, AST memory allocation, and the DAG (node-based) linking system.
+*   **Phase 2 (The MVP):** Release the 1D and 2D Lenses—specifically, a node-based Markdown editor perfectly linked to a localized Spreadsheet/Math engine.
+*   **Phase 3:** Open the API. Allow the FOSS community to build the Continuous-Time (Video) and Spatial-Temporal (Audio) Lenses on top of the stabilized multi-dimensional core.
