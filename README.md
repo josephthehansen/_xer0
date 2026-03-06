@@ -4,10 +4,12 @@
 _xer0 is a total architectural redesign of how digital media is authored, linked, collaborated on, and published.
 
 ## ⚠️ Repository Status: Conceptual / Parked
-*This repository currently houses the foundational architectural manifesto and technical rationale for Project _xer0, born from a late-night systems design session in March 2026. The `chat_history.json` file contains the raw conceptualization. This repo is parked for future development, FOSS contribution, and structural mapping.*
+*This repository currently houses the foundational architectural manifesto and technical rationale for Project _xer0, born from a late-night systems design session in March 2026. The link to the chat below contains the raw conceptualization. This repo is parked for future development, FOSS contribution, and structural mapping.*
 
 ### Note
-Created `chat_history.json` conversation using [AI Studio](https://aistudio.google.com/). Original converstaion with Gemini (https://gemini.google.com/) around 2026-03-05T22:00:00+02:00Z but copy-pasted to AI Studio for easier sharing
+Conversation conducted using [AI Studio](https://aistudio.google.com/). Original converstaion with Gemini (https://gemini.google.com/) around 2026-03-05T22:00:00+02:00Z but copy-pasted to AI Studio for easier sharing.
+
+To continue converstaion, click [here](https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221NnPDj4VJan-ks6x7ZdmjxQj-LbuV6pxM%22%5D,%22action%22:%22open%22,%22userId%22:%22101246979329773948425%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing). To save to your conversations, click the three vertical dots `⋮` on the top right and say "Make a copy".
 
 ---
 
