@@ -6,6 +6,9 @@ _xer0 is a total architectural redesign of how digital media is authored, linked
 ## ⚠️ Repository Status: Conceptual / Parked
 *This repository currently houses the foundational architectural manifesto and technical rationale for Project _xer0, born from a late-night systems design session in March 2026. The `chat_history.json` file contains the raw conceptualization. This repo is parked for future development, FOSS contribution, and structural mapping.*
 
+### Note
+Created `chat_history.json` conversation using [AI Studio](https://aistudio.google.com/). Original converstaion with Gemini (https://gemini.google.com/) around 2026-03-05T22:00:00+02:00Z but copy-pasted to AI Studio for easier sharing
+
 ---
 
 ## 1. The Manifesto: Why _xer0 Exists
